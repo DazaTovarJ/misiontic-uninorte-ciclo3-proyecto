@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf")
+      format("truetype");
+    font-weight:normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "isocteui";
+    src: url("../fonts/isocteur.ttf")
+      format("truetype");
+    font-weight:normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat bold";
+    src: url("../fonts/Montserrat-Bold.ttf")
+      format("truetype");
+    font-weight:bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat Light";
+    src: url("../fonts/Montserrat-Light.ttf")
+      format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat italic";
+    src: url("../fonts/Montserrat-Italic.ttf")
+      format("truetype");
+    font-weight:normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Montserrat italic light";
+    src: url("../fonts/Montserrat-LightItalic.ttf")
+      format("truetype");
+    font-weight:lighter;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Montserrat italic bold";
+    src: url("../fonts/Montserrat-BoldItalic.ttf")
+      format("truetype");
+    font-weight:bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "isocteui italic";
+    src: url("../fonts/isocteui.ttf")
+      format("truetype");
+    font-weight:normal;
+    font-style: italic;
+  }
+$primary: #937D1B;
+$secondary: #B49E46;
+$success: #DDDF4B;
+$danger: #e83030;
+$warning: #f4bb2e;
+$info: #CA9E67;
+$light: #c0c0c0;
+$dark: #404040;
+$avion: #6A7D0A;
+$pasajero: #5B4F0D;
+$copper: #d18d08;
+$teams: #f4cf72;
+$levels: #650713;
+$rewards: #f07575;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$font-family-sans-serif: "Montserrat", "ISOCPEUR Italic", "ISOCPEUR Regular";
+$card-height: 100%;
+/* import bootstrap to set changes */@import "../node_modules/bootstrap/scss/bootstrap";

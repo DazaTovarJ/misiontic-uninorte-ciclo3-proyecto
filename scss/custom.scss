@@ -54,31 +54,10 @@
     font-weight:normal;
     font-style: italic;
   }
-$primary: #937D1B;
-$secondary: #B49E46;
-$success: #DDDF4B;
-$danger: #e83030;
-$warning: #f4bb2e;
-$info: #CA9E67;
-$light: #c0c0c0;
-$dark: #404040;
-$avion: #6A7D0A;
-$pasajero: #5B4F0D;
-$copper: #d18d08;
-$teams: #f4cf72;
-$levels: #650713;
-$rewards: #f07575;
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-);
+
 
 $font-family-sans-serif: "Montserrat", "ISOCPEUR Italic", "ISOCPEUR Regular";
+$headings-font-family: "Montserrat Bold";
 $card-height: 100%;
-/* import bootstrap to set changes */@import "../node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";

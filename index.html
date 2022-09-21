@@ -7,22 +7,20 @@
   <title>Aeropuerto Alfonso Bonilla Aragon</title>
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/stilos.css">
 
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="images/aeropuerto/logoaerocali.jpg"width="60" height="60" alt="logoprincipal"/>
-          <a class="navbar-brand" href="#">AEROPUERTO<strong> ALFONSO BONILLA ARAGON </strong></a> &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <ul class="nav justify-content-end">
+        <a class="navbar-brand" href="#"><img src="images/aeropuerto/logoaerocali.png"width="60" height="60" alt="logoprincipal"/>
+          <a class="navbar-brand" href="#">AEROPUERTO<strong> ALFONSO BONILLA ARAGON </strong></a>
+        <ul class="nav justify-content-end ms-auto">
             <div class="mx-auto" style="width: 700px;"></div>
-              <img src="images/74472-12-12.png" width="31" height="31" alt=""/>&nbsp;&nbsp;
+              <img src="images/iconos/74472-12-12.png" width="31" height="31" alt=""/>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LOGING</a>
+            <a class="nav-link dropdown-toggle nav-principal" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LOGING</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
                 <a class="dropdown-item" href="#">USUARIO</a>
                 <a class="dropdown-item" href="#">PILOTO</a>
@@ -31,7 +29,7 @@
        
         <form class="d-flex my-2 my-lg-0">
             <input class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+            <button class="btn btn-primary my-2 my-sm-0 text-bold" type="submit">BUSCAR</button>
         </form>
      </div>
     </ul>
@@ -44,26 +42,80 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                  <a class="color nav-link active" href="#" aria-current="page">INICIO <span class="visually-hidden">(current)</span></a>
+                  <a class="color nav-link active nav-principal" href="#" aria-current="page">INICIO <span class="visually-hidden">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">CONOCENOS</a>
+                  <a class="nav-link nav-principal" href="#">CONOCENOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">VUELOS</a>
+                <a class="nav-link nav-principal" href="#">VUELOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">REGISTRO</a>
+              <a class="nav-link nav-principal" href="#">REGISTRO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ATENCION AL USUARIO</a>
+            <a class="nav-link nav-principal" href="#">ATENCION AL USUARIO</a>
         </li>
     </div>
 </nav>
                          </ul>
         
   </header>
-  <main>
+  <main class="container-fluid"> 
+    <div class="row">  
+      <div class="col" > <h3>AEROPUERTO <br> 
+         <span class="g">ALFONSO</span><br><span class="m">BONILLA ARAGON</span></h3>
+         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+          euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
+          nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+          vulputate velit esse molestie consequat</p>
+        <button >CONOCE MAS</button>
+        </div>
+      <div class="col" > <img src="images/otros/ciudad-cartagena-800.jpg" width="800" height="433" alt="">
+    </div>
+    <div class="row">
+      <div class="col" >
+        
+        <form   class="formulario-inicio p-4">
+          <fieldset>
+            <legend> REGISTRATE AQUI </legend>
+            <div class="row mb-3">
+              <div class="col"> <input class="form-control" type="text" name="nombre" placeholder="Nombre"></div>
+              <div class="col"> <input class="form-control" type="text" name="apellido" placeholder="Apellido"></div>
+              </div>
+              <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Correo Electronico"></div>
+              <div class="row mb-3">
+                <div class="col"><input type="password" class="form-control" name="password" placeholder="Contraseña">
+               </div>
+              <div class="col"><input type="password" class="form-control" name="password_confirm" placeholder="Confirmar Contraseña"></div>
+            </div>
+           
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="aceptar-politicas" name="aceptar_politicas">
+              <label class="form-check-label" for="aceptar-politicas">Acepto las politicas de privacidad</label>
+            </div>
+            <div class="row"><button type="submit" class="btn btn-primary">REGISTRARSE</button></div>
+            
+          </fieldset>
+          
+        </form>
+      </div>
+        <div class="col" > 
+          <div class="container img-end">
+            <div class="row">
+              <div class="col-6"><img src="images/otros/ciudad-cartagena-800.jpg" width="430" height="200" alt=""></div>
+              <div class="col-6"><img src="images/otros/ciudad-cartagena-800.jpg" width="430" height="200" alt=""></div>
+            <div class="col">
+        </div>
+        
+          </div>
+          <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">RESERVAS</button>
+              <button type="button" class="btn btn-dark">OFERTAS</button>
+            </div>
+    </div>
     
   </main>
   <footer>

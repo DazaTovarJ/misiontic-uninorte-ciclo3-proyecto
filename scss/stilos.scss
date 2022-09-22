@@ -1,0 +1,26 @@
+@use "variables";
+.nav-principal
+
+ {
+  color:variables.$primary;
+  font-weight: bold;    
+ }
+.g
+{
+    font-size: 500%;
+}
+
+.m
+{
+    font-size: 200%;
+}
+.formulario-inicio
+{
+    color:white;
+    background-color: variables.$dark;
+    border-radius: 0.9rem;
+    legend{
+    text-align: center;    
+    }
+}
+

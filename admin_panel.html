@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador | Aeropuerto Alfonso Bonilla Aragón</title>
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/stilos.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+      <div class="container-fluid flex-column flex-lg-row">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/aeropuerto/logoaerocali.png" width="60" alt="logo principal" />
+          <span>AEROPUERTO <strong>ALFONSO BONILLA ARAGON</strong></span>
+        </a>
+        <ul class="nav ms-lg-auto">
+          <!-- <div class="mx-auto" style="width: 700px;"></div> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-principal" href="#" id="dropdownId" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+              Administrador
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">
+                <i class="bi bi-person-lines-fill"></i>
+                Perfil
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar sesión
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid">
+    <hr class="admin-separator" />
+    <h2>Panel de Administración</h2>
+    <div class="col-2">
+      <a href="#" class="btn btn-primary mb-4">Reporte de operación</a>
+    </div>
+    <div class="col-10"></div>
+  </main>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js">
+  </script>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js">
+  </script>
+</body>
+
+</html>

@@ -2,6 +2,10 @@ img {
   max-width: 100%;
 }
 
+strong {
+  font-family: "Montserrat Bold";
+}
+
 .nav-principal {
   color: #937D1B;
   font-weight: bold;

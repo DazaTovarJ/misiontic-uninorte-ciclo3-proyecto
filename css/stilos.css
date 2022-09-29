@@ -13,7 +13,7 @@ strong {
 }
 
 .g {
-  font-size: 4rem;
+    font-size: 600%;
 }
 
 .m {
@@ -28,4 +28,33 @@ strong {
 .formulario-inicio legend {
   font-family: "Montserrat bold";
   text-align: center;
+}
+
+.formulario-reserva {
+  color: white;
+  background-color: #1e1e1e;
+  border-radius: 0.9rem;
+}
+.formulario-reserva legend {
+  text-align: justify;
+}
+.formulario-reserva h6 {
+  text-align: center;
+}
+
+button {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  font-family: "Montserrat Bold";
+  padding: 0.25rem;
+}
+
+.bg-enc-text {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  padding: 0.25rem;
 }/*# sourceMappingURL=stilos.css.map */

@@ -17,7 +17,7 @@
       <div class="container-fluid flex-column flex-lg-row">
         <a class="navbar-brand" href="index.html">
           <img src="images/aeropuerto/logoaerocali.png" width="60" alt="logo principal" />
-          <span>AEROPUERTO <strong>ALFONSO BONILLA ARAGON</strong></span>
+          <span class="d-none d-lg-inline">AEROPUERTO <strong>ALFONSO BONILLA ARAGON</strong></span>
         </a>
         <ul class="nav ms-lg-auto">
           <!-- <div class="mx-auto" style="width: 700px;"></div> -->
@@ -44,11 +44,73 @@
   </header>
   <main class="container-fluid">
     <hr class="admin-separator" />
-    <h2>Panel de Administración</h2>
-    <div class="col-2">
-      <a href="#" class="btn btn-primary mb-4">Reporte de operación</a>
+    <h2 class="text-center">Panel de Administración</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <nav class="nav flex-column">
+          <a class="nav-link active" aria-current="page" href="#">
+            Administración de pilotos
+          </a>
+          <a class="nav-link" href="#">
+            Administración de Usuarios
+          </a>
+          <a class="nav-link" href="#">
+            Reportes de operaciones
+          </a>
+          <a class="nav-link">Gestión de PQRS</a>
+        </nav>
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <h3>Administración de PQRS</h3>
+        <table class="table table-striped caption-top">
+          <caption>Reportes de PQRS</caption>
+          <thead>
+            <tr>
+              <th scope="col">Id Usuario</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Fecha de radicación</th>
+              <th scope="col">Asunto</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Juan</td>
+              <td>Pérez</td>
+              <td>3012345678</td>
+              <td>perez@example.com</td>
+              <td>02/09/2022</td>
+              <td>Mal aseo</td>
+              <td>Seleccionar</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Ana</td>
+              <td>Jiménez</td>
+              <td>3123456789</td>
+              <td>ajimenez10@example.com</td>
+              <td>31/08/2022</td>
+              <td>Excelente atención</td>
+              <td>Seleccionar</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>Howard</td>
+              <td>12165551234</td>
+              <td>perez@example.com</td>
+              <td>02/09/2022</td>
+              <td>Good vista!</td>
+              <td>Seleccionar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="col-10"></div>
   </main>
   <script src="node_modules/@popperjs/core/dist/umd/popper.min.js">
   </script>

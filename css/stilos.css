@@ -1,11 +1,14 @@
+img {
+  max-width: 100%;
+}
+
 .nav-principal {
   color: #937D1B;
   font-weight: bold;
 }
 
-
 .g {
-    font-size: 600%;
+  font-size: 500%;
 }
 
 .m {
@@ -19,4 +22,33 @@
 }
 .formulario-inicio legend {
   text-align: center;
+}
+
+.formulario-reserva {
+  color: white;
+  background-color: #1e1e1e;
+  border-radius: 0.9rem;
+}
+.formulario-reserva legend {
+  text-align: justify;
+}
+.formulario-reserva h6 {
+  text-align: center;
+}
+
+button {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  font-family: "Montserrat Bold";
+  padding: 0.25rem;
+}
+
+.bg-enc-text {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  padding: 0.25rem;
 }/*# sourceMappingURL=stilos.css.map */

@@ -8,11 +8,11 @@ img {
 }
 
 .g {
-  font-size: 500%;
+    font-size: 600%;
 }
 
 .m {
-  font-size: 200%;
+  font-size: 2rem;
 }
 
 .formulario-inicio {
@@ -21,6 +21,7 @@ img {
   border-radius: 0.9rem;
 }
 .formulario-inicio legend {
+  font-family: "Montserrat bold";
   text-align: center;
 }
 

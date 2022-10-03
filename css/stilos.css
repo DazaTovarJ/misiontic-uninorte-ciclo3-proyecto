@@ -8,11 +8,43 @@ img {
 }
 
 .g {
-    font-size: 600%;
+  font-size: 9rem;
+  font-family: "Montserrat bold";
+}
+
+.formulario-reserva {
+  color: white;
+  background-color: #1e1e1e;
+  border-radius: 0.9rem;
+}
+.formulario-reserva legend {
+  font-family: "Montserrat bold";
+  text-align: center;
+  font-size: 2rem;
+}
+.formulario-reserva h6 {
+  text-align: center;
+}
+
+button {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  padding: 0.25rem;
+}
+
+.bg-enc-text {
+  background-color: #937D1B;
+  text-align: center;
+  color: white;
+  padding: 0.25rem;
 }
 
 .m {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .formulario-inicio {
@@ -25,31 +57,42 @@ img {
   text-align: center;
 }
 
-.formulario-reserva {
-  color: white;
-  background-color: #1e1e1e;
-  border-radius: 0.9rem;
-}
-.formulario-reserva legend {
+.pjustify {
+  margin: 0;
+  text-indent: 2rem;
   text-align: justify;
 }
-.formulario-reserva h6 {
-  text-align: center;
-}
 
-button {
+.btn-dob {
   background-color: #937D1B;
   text-align: center;
   color: white;
-  border-radius: 0.9rem;
   font-size: 1rem;
-  font-family: "Montserrat Bold";
+  font-family: "Montserrat";
   padding: 0.25rem;
 }
 
-.bg-enc-text {
+.sub-title {
+  font-family: "Montserrat bold";
+  text-align: center;
+  color: #937D1B;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn-dark {
+  background-color: #1e1e1e;
+  text-align: center;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  padding: 0.25rem;
+}
+
+.pq-text {
   background-color: #937D1B;
   text-align: center;
   color: white;
-  padding: 0.25rem;
+  padding: 0.5rem;
 }/*# sourceMappingURL=stilos.css.map */

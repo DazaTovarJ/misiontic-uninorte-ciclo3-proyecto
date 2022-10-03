@@ -9,7 +9,9 @@ img {
   font-weight: bold;
 }
 .g {
-  font-size: 4rem;
+  font-size: 9rem;
+  font-family:"Montserrat bold";
+
 }
 .formulario-reserva
 {
@@ -17,21 +19,23 @@ img {
     background-color:variables.$dark;
     border-radius: 0.9rem;
     legend{
-    text-align: justify;    
+      font-family: "Montserrat bold";
+      text-align: center; 
+      font-size: 2rem;  
     }
     h6{
     text-align: center;
     }
+
 }
 button
-
 {
 background-color: variables.$primary;
 text-align: center; 
 color: #ffff;
-border-radius: 0.9rem;
+border-radius: 0.5rem;
 font-size: 1rem;
-font-family:"Montserrat Bold";
+font-family:"Montserrat";
 padding: 0.25rem ;
 }
 
@@ -44,8 +48,9 @@ padding: 0.25rem ;
 }
 
 .m {
-  font-size: 2rem;
+  font-size: 4rem;
 }
+
 .formulario-inicio {
   color: white;
   background-color: variables.$dark;
@@ -55,3 +60,46 @@ padding: 0.25rem ;
     text-align: center;
   }
 }
+
+.pjustify {
+  margin: 0;
+  text-indent: 2rem;
+  text-align: justify;
+}
+
+.btn-dob
+{
+  background-color: variables.$primary;
+  text-align: center; 
+  color: #ffff;
+  font-size: 1rem;
+  font-family:"Montserrat";
+  padding: 0.25rem ;
+  }
+ 
+  .sub-title {
+    font-family: "Montserrat bold";
+    text-align: center;
+    color: variables.$primary;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .btn-dark
+  {
+    background-color: variables.$dark;
+    text-align: center; 
+    color: #ffff;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family:"Montserrat";
+    padding: 0.25rem ;
+    }
+
+    .pq-text
+    {
+      background-color: variables.$primary;
+      text-align: center; 
+      color: #ffff;
+      padding: 0.5rem ;
+      }

@@ -1,7 +1,12 @@
 @use "variables";
 
-img {
+img,
+table {
   max-width: 100%;
+}
+
+strong {
+  font-family: "Montserrat Bold";
 }
 
 .nav-principal {

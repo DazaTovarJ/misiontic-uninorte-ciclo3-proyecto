@@ -46,6 +46,8 @@ button {
   text-align: center;
   color: white;
   padding: 0.25rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
 }
 
 .m {

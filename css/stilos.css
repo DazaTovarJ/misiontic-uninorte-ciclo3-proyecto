@@ -46,8 +46,6 @@ button {
   text-align: center;
   color: white;
   padding: 0.25rem;
-  font-size: 1.5rem;
-  font-family: "Montserrat";
 }
 
 .m {
@@ -87,6 +85,14 @@ button {
   font-size: 2rem;
 }
 
+.acord-title {
+  font-family: "Montserrat bold";
+  text-align: center;
+  color: #937D1B;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 .btn-dark {
   background-color: #1e1e1e;
   text-align: center;
@@ -101,5 +107,19 @@ button {
   background-color: #937D1B;
   text-align: center;
   color: white;
+  padding: 0.5rem;
+}
+
+.img-fondo {
+  background-image: url(../images/aeropuerto/Viaje_Combinado_0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aviso-reserva {
+  text-align: justify;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Montserrat bold";
   padding: 0.5rem;
 }/*# sourceMappingURL=stilos.css.map */

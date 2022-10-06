@@ -22,21 +22,38 @@
         </a>
         <ul class="nav ms-lg-auto">
           <!-- <div class="mx-auto" style="width: 700px;"></div> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-principal" href="#" id="dropdownId" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item">
+            <a class="nav-link  nav-principal" href="#" id="dropdownId" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
               <i class="bi bi-person-circle"></i>
               LOGIN
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">
-                <i class="bi bi-people-fill me-2"></i>
-                USUARIO
-              </a>
-              <a class="dropdown-item" href="/perfil_piloto.html">
-                <i class="bi bi-airplane-fill me-2"></i>
-                PILOTO
-              </a>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">INICIAR SESION</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="login-form">
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">USUARIO:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label">CONTRASEÑA:</label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
 
@@ -96,7 +113,7 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="submit">CONÓCENOS <a href="/about.html"></a></button>
+                 <a class="btn btn-primary btn-dob" href="/about.html"> CONÓCENOS </a>
       </div>
       <div class="col-sm-12 col-lg-6">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -149,7 +166,7 @@
               <input type="checkbox" class="form-check-input" id="aceptar-politicas" name="aceptar_politicas">
               <label class="form-check-label" for="aceptar-politicas">Acepto las politicas de privacidad</label>
             </div>
-            <div class="row"><button type="submit">REGISTRARSE <a href="/user_register.html"></a></button></div>
+            <div class="row"><button type="submit" class="btn btn-primary btn-dob">REGISTRARSE </button></div>
 
           </fieldset>
 
@@ -169,14 +186,14 @@
                 fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                 <path
                   d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-              </svg>&nbsp;RESERVAS <a href="/reservas.html"></a></button>
+              </svg>&nbsp;<a class="text-bt-ligt" href="/reservas.html">RESERVAS </a></button>
             <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
                 <path
                   d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                 <path
                   d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
-              </svg>&nbsp;OFERTAS <a href="/ofertas.html"></a></button>
+              </svg>&nbsp;<a  class="text-bt-ligt" href="/ofertas.html">OFERTAS </a></button>
           </div>
         </div>
 
@@ -218,7 +235,7 @@
           d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
       </svg>&nbsp;&nbsp;
     </div>
-
+   
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="node_modules/@popperjs/core/dist/umd/popper.min.js">

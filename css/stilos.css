@@ -122,4 +122,16 @@ button {
   font-size: 1.5rem;
   font-family: "Montserrat bold";
   padding: 0.5rem;
+}
+
+.pilot-text {
+  font-family: "Montserrat bold";
+  text-align: center;
+  font-size: 1.5rem;
+  display: inline-block;
+  color: rgb(81, 6, 6);
+  border: 2px solid #937D1B;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  padding: 0.5rem;
 }/*# sourceMappingURL=stilos.css.map */

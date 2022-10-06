@@ -23,20 +23,37 @@
         <ul class="nav ms-lg-auto">
           <!-- <div class="mx-auto" style="width: 700px;"></div> -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-principal" href="#" id="dropdownId" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link  nav-principal" href="#" id="dropdownId" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
               <i class="bi bi-person-circle"></i>
               LOGIN
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">
-                <i class="bi bi-people-fill me-2"></i>
-                USUARIO
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="bi bi-airplane-fill me-2"></i>
-                PILOTO
-              </a>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">INICIAR SESION</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="login-form">
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">USUARIO:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label">CONTRASEÑA:</label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
 
@@ -48,33 +65,34 @@
       </div>
     </nav>
     <!-- añadio sombra en el cabezote <div class="shadow p-3 mb-5 bg-body rounded"> -->
-    <div class="shadow p-3 mb-5 bg-body rounded">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav w-90 justify-content-md-between mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active nav-principal" href="index.html" aria-current="page">INICIO <span
-                  class="visually-hidden">(activo)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="about.html">CONÓCENOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">VUELOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">REGISTRO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">ATENCIÓN AL USUARIO</a>
-            </li>
-        </div>
-      </nav>
-      </ul>
-    </div>
+      <div class="shadow p-3 mb-5 bg-body rounded">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav w-90 justify-content-md-between mt-5 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active nav-principal" href="/index.html" aria-current="page">INICIO <span
+                    class="visually-hidden">(activo)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/about.html">CONÓCENOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/travel.html">VUELOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/user_register.html">REGISTRO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/atencion_usuario.html">ATENCIÓN AL USUARIO</a>
+              </li>
+          </div>
+        </nav>
+        </ul>
+      </div>
+  
 
   </header>
   
@@ -186,8 +204,8 @@
               <div class="form-group">
                 <div class="col-md-12 text-center">
                   <button type="submit">REGISTRARME</button>
-                  <button type="submit">LIMPIAR</button>
-                  <button type="submit">CANCELAR</button>
+                  <button type="reset">LIMPIAR</button>
+                 
                  </div>
 
               </div>
@@ -205,13 +223,13 @@
               <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
                 <button type="button" class="btn btn-dob"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>&nbsp;RESERVAS</button>
+                </svg>&nbsp;<a class="text-bt-ligt" href="/reservas.html">RESERVAS </a></button>
                 <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
                   <path
                     d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                   <path
                     d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
-                </svg>OFERTAS</button>
+                </svg><a  class="text-bt-ligt" href="/ofertas.html">OFERTAS </a></button>
                </div>
             </div>
 

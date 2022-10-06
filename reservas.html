@@ -23,20 +23,37 @@
         <ul class="nav ms-lg-auto">
           <!-- <div class="mx-auto" style="width: 700px;"></div> -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-principal" href="#" id="dropdownId" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link  nav-principal" href="#" id="dropdownId" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
               <i class="bi bi-person-circle"></i>
               LOGIN
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">
-                <i class="bi bi-people-fill me-2"></i>
-                USUARIO
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="bi bi-airplane-fill me-2"></i>
-                PILOTO
-              </a>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">INICIAR SESION</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="login-form">
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">USUARIO:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label">CONTRASEÑA:</label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
 
@@ -48,34 +65,34 @@
       </div>
     </nav>
     <!-- añadio sombra en el cabezote <div class="shadow p-3 mb-5 bg-body rounded"> -->
-    <div class="shadow p-3 mb-5 bg-body rounded">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav w-90 justify-content-md-between mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active nav-principal" href="index.html" aria-current="page">INICIO <span
-                  class="visually-hidden">(activo)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="about.html">CONÓCENOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">VUELOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">REGISTRO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-principal" href="#">ATENCIÓN AL USUARIO</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
-    </div>
+      <div class="shadow p-3 mb-5 bg-body rounded">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav w-90 justify-content-md-between mt-5 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active nav-principal" href="/index.html" aria-current="page">INICIO <span
+                    class="visually-hidden">(activo)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/about.html">CONÓCENOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/travel.html">VUELOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/user_register.html">REGISTRO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-principal" href="/atencion_usuario.html">ATENCIÓN AL USUARIO</a>
+              </li>
+          </div>
+        </nav>
+        </ul>
+      </div>
+  
   </header>
 
   <main class="container-fluid">
@@ -124,6 +141,8 @@
             </fieldset>
           </form>
 
+         
+
           <div class="container col-12">
             <div class="row">
               <div class="col-12">
@@ -137,7 +156,14 @@
                       </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      <div class="accordion-body">Elementos prohibidos
+                        De acuerdo al Reglamento Aeronáutico Colombiano (RAC), existen artículos que no pueden ser transportados en el equipaje de mano,
+                        razón por la cual el personal de seguridad del filtro de control de ingreso a las salas de abordaje no permite su paso. Los artículos
+                        prohibidos tendrán el manejo y la disposición final establecidos en el Plan de seguridad del Aeropuerto Alfonso Bonilla Aragon 
+                      (Aprobado por la Aeronáutica Civil) y no podrán recuperarlos en ningún momento.
+                        
+                        Podrá conocer previamente estas restricciones, a través de las ayudas visuales ubicadas antes del ingreso a los filtros de seguridad,
+                        en las cuales mediante una maleta a escala se exhiben los elementos que no están permitidos en el equipaje de mano.</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -147,7 +173,16 @@
                       </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body">Vuelos nacionales
+                         <a  href="/images/otros/prohibido_equipaje_manoPNG.PNG">Conozca aquí</a> los elementos prohibidos en el equipaje de mano para vuelos nacionales.
+                        
+                        Vuelos Internacionales
+                        <a  href="/images/otros/prohibido_equipaje_mano_internacional.PNG">Conozca aquí</a> los elementos prohibidos en el equipaje de mano para vuelos internacionales.
+                        
+                        Restricciones especiales
+                        No se permite el ingreso de elementos LAGs  (Líquidos, Aerosoles y Geles) en envases superiores a 100 ml, 100 gr o 3.4 oz.
+                        
+                        Para los vuelos hacia Estados Unidos, no se permite el transporte de sustancias en polvo y granulados superiores a 12 onzas (340 gr)</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -157,7 +192,8 @@
                       </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body">Si su vuelo es nacional o internacional, tenga en cuenta los siguientes elementos que no son permitidos en el equipaje de bodega.
+                        <a  href="/images/otros/elementos_no_permitidos.PNG"> Haga clic aquí para conocerlos.</a> </div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -167,7 +203,13 @@
                       </button>
                     </h2>
                     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body">l peso y las dimensiones máximas permitidas del equipaje de bodega en todos los destinos por pasajero son; 23 kg
+                        en Clase económica y 32 kg en Clase ejecutiva (este peso solo aplica para la tarifa XXL y para la primera pieza de equipaje de la tarifa XL),
+                        adicionalmente no debe superar los 158 centímetros lineales equivalentes a la suma de las dimensiones exteriores (alto+largo+ancho).
+                        Si superas las dimensiones o el peso definidos, deberás pagar el costo por sobredimensión y/o el valor del equipaje adicional más el costo por sobrepeso.
+                        Por regulación de equipaje, para vuelos desde/hacia Europa no es posible superar el peso de 32 kg por pieza, incluso si pagas el sobrepeso.  
+
+                      </div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -177,7 +219,9 @@
                       </button>
                     </h2>
                     <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body">Cuando tu equipaje excede las dimensiones y peso permitidos, tendrás un cargo adicional por “sobrepeso” y “sobredimensión”
+                        para ser transportado. Este cargo se aplicará a todas las piezas de equipaje que se encuentren por encima de las medidas estándar, ten en cuenta el peso
+                        y las medidas que debe tener tu equipaje de bodega. </div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -187,7 +231,13 @@
                       </button>
                     </h2>
                     <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body">Este es un documento guía para el ingreso, control y la tenencia adecuada de mascotas durante la permanencia de estas
+                         y su persona responsable en el Aeropuerto Alfonso Bonilla Aragon.
+                         Para la movilización dentro del territorio nacional de perros y gatos, no se requiere certificación sanitaria del ICA. Sin embargo,
+                         es necesario que se ponga en contacto con su aerolínea para conocer directamente los requisitos que debe tener en cuenta al momento
+                         de viajar en compañía de su mascota .<a  href="/enlaces_manuales/20210514_manual mascotas el dorado.pdf"> Conozca aqui el manual de tenencia de mascotas</a>
+
+                         <a  href="/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf"> .Haga clic aquí para conocer</a>  la guía de control y tenencia de mascotas en el Aeropuerto </div>
                     </div>
                   </div>
                 </div>
@@ -240,8 +290,21 @@
               <div class="col nav-principal"> SALIDA </div> 
               <div class="col nav-principal"> LLEGADA </div> 
             </div>
-           
+            
+            <div class="row">
+              <img src="/images/aeropuerto/reserva_vuelo_gettyrf_1207226731_sankai_getty_images.jpg" width="300" height="200" alt="">
+              <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+               
+                <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                  <path
+                    d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+                </svg>&nbsp;<a class="text-bt-ligt" href="/ofertas.html">OFERTAS </a></button>
+               </div>
+            </div>
           </div>
+          
         </div>
       </div>
   

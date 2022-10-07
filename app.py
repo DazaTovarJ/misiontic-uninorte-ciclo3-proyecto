@@ -17,6 +17,9 @@ def about():
 def travel():
     return render_template('travel.html')
 
+@app.route("/ofertas")
+def ofertas():
+    return render_template('ofertas.html')
 
 @app.route("/registro")
 def registro():
@@ -31,3 +34,5 @@ def contacto():
 @app.route("/reservas")
 def reservas():
     return render_template('reservas.html')
+
+

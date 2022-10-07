@@ -22,7 +22,8 @@ Inicio
       José María Córdova de Medellín.
       Es la base para aviones privados y comerciales, además de ser la sede de la escuela de formación de pilotos
       Aeroccidente.</p>
-    <a class="btn btn-primary btn-dob" href="/about.html"> CONÓCENOS </a>
+    <a class="btn btn-primary btn-dob" href="
+    {{url_for("mostrar_about")}}"> CONÓCENOS </a>
   </div>
   <div class="col-sm-12 col-lg-6">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -99,7 +100,7 @@ Inicio
           <i class="bi bi-cart3"></i>
           RESERVAS
         </a>
-        <a class="btn btn-dark text-bt-ligt" href="/ofertas.html">
+        <a class="btn btn-dark text-bt-ligt" href="{{url_for("ofertas")}}">
           <i class="bi bi-tags-fill"></i>
           OFERTAS
         </a>

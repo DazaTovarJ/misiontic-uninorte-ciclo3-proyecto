@@ -2,7 +2,13 @@
 insert into gestion_vuelos.roles (id, nombre, descripcion, creado, actualizado, estado)
 values  (1, 'Piloto', 'Piloto', '2022-10-05 02:40:16', '2022-10-05 02:40:16', 1),
         (2, 'Superadministrador', 'Superadministrador', '2022-10-05 02:40:16', '2022-10-05 02:40:16', 1),
-        (3, 'Pasajero', 'Pasajero', '2022-10-05 02:40:16', '2022-10-05 02:40:16', 1);
+        (3, 'Pasajero', 'Pasajero', '2022-10-05 02:40:16', '2022-10-05 02:40:16', 1)
+
+--tipos_de_documentos
+insert into gestion_vuelos.tipos_de_documentos (id, abreviatura, nombre, pais, creado, actualizado, estado)
+values  (1, 'CC', 'Cedula de ciudadania', 1, '2022-10-08 02:58:36', '2022-10-08 02:58:36', 1),
+        (2, 'CE', 'Cedula de extrangeria', 1, '2022-10-08 02:58:36', '2022-10-08 02:58:36', 1),
+        (3, 'TI', 'Tarjeta de identidad', 1, '2022-10-08 02:58:36', '2022-10-08 02:58:36', 1);
 
 -- nacionalidaes
 insert into gestion_vuelos.nacionalidades (id, nacionalidad, creado, actualizado, estado)

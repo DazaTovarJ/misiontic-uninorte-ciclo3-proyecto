@@ -1,7 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json, jsonify, Response
+from flask_mysqldb import MySQL
 
-app = Flask(__name__)
+from models.ModelPais import ModelPais
+app = Flask(__name__) 
 
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'example'
+app.config['MYSQL_DB'] = 'gestion_vuelos'
+db =  MySQL(app)
 
 @app.route('/')
 def index():
@@ -36,3 +43,19 @@ def reservas():
     return render_template('reservas.html')
 
 
+"""
+Rutas de api
+"""
+
+@app.route("/api/tipos_documento", methods = ['GET'])
+def get_tipos_documento():
+    return  Response(json.dumps(paises[0].__dict__), mimetype='application/json')
+
+@app.route("/api/nacionalidades", methods = ['GET'])
+def get_nacionalidades():
+    return  Response(json.dumps(paises[0].__dict__), mimetype='application/json')
+
+@app.route("/api/paises", methods = ['GET'])
+def get_paises():
+    paises = ModelPais.get_paises(db)
+    return  Response(json.dumps(paises[0].__dict__), mimetype='application/json')

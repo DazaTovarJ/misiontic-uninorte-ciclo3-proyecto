@@ -32,6 +32,56 @@ User_register
               </div>
 
               <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <select id="tipoDocumento" name="tipoDocumento" class="form-select" aria-label="Seleccione un tipo de documento">
+                    <option selected>Seleccione un tipo de documento</option>
+                    {% for tipoDoc in tiposDocumento %}
+                      <option value="{{tipoDoc.id}}">{{tipoDoc.abreviatura}} - {{tipoDoc.nombre}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <select id="genero" name="genero" class="form-select" aria-label="genero">
+                    <option selected>Seleccione genero</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="OTROS">No definido</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <input id="numeroIdentificacion" name="numeroIdentificacion" type="text" placeholder=" Numero de identificacion" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <input id="fechaNacimiento" name="fechaNacimiento" type="date" placeholder=" Numero de identificacion" class="form-control">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <select id="nacionalidad" name="nacionalidad" class="form-select" aria-label="Seleccione un tipo de documento">
+                    <option selected>Seleccione su nacionalidad</option>
+                    {% for nacionalidad in nacionalidades %}
+                      <option value="{{nacionalidad.id}}">{{nacionalidad.nacionalidad}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                 <div class="col-md-8  m-2">
                   <input id="email" name="email" type="text" placeholder="Correo Electronico" class="form-control">
@@ -43,6 +93,21 @@ User_register
                 <div class="col-md-8  m-2">
                   <input id="email_conf" name="email_conf" type="text" placeholder="Confirmacion Correo Electronico"
                     class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                <div class="col-md-8  m-2">
+                  <input type="password_confirm" class="form-control" name="password_confirm"
+                    placeholder="Confirmar Contraseña">
                 </div>
               </div>
 
@@ -63,21 +128,31 @@ User_register
               <div class="form-group">
                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                 <div class="col-md-8  m-2">
-                  <input id="city" name="city" type="text" placeholder="Ciudad" class="form-control">
+                  <select id="country" name="country" class="form-select" aria-label="Seleccione un país">
+                    <option selected>Seleccione un país</option>
+                    {% for pais in paises %}
+                      <option value="{{pais.id}}">{{pais.pais}}</option>
+                    {% endfor %}
+                  </select>
                 </div>
               </div>
 
               <div class="form-group">
                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                 <div class="col-md-8  m-2">
-                  <input id="country" name="country" type="text" placeholder="Pais" class="form-control">
+                  <select id="city" name="city" class="form-select" aria-label="Seleccione una ciudad">
+                    <option selected>Seleccione una ciudad</option>
+                    {% for ciudad in ciudades %}
+                      <option value="{{ciudad.id}}">{{ciudad.ciudad}}</option>
+                    {% endfor %}
+                  </select>
                 </div>
               </div>
 
               <div class="form-group">
                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                 <div class="col-md-8  m-2">
-                  <input id="contact" name="contact" type="text" placeholder="Contacto de Emergencia"
+                  <input id="contact" name="contact" type="text" placeholder="Nombre de contacto de Emergencia"
                     class="form-control">
                 </div>
               </div>
@@ -85,23 +160,8 @@ User_register
               <div class="form-group">
                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                 <div class="col-md-8  m-2">
-                  <input id="n_contact" name="n_contact" type="text" placeholder="Número del contacto"
+                  <input id="n_contact" name="n_contact" type="text" placeholder="Número del contacto de emergencia"
                     class="form-control">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                <div class="col-md-8  m-2">
-                  <input type="password" class="form-control" name="password" placeholder="Contraseña">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                <div class="col-md-8  m-2">
-                  <input type="password_confirm" class="form-control" name="password_confirm"
-                    placeholder="Confirmar Contraseña">
                 </div>
               </div>
 

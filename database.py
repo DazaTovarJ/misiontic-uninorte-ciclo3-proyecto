@@ -20,6 +20,21 @@ class Database():
         cur.close()
         return data
 
+    def get_paises(self):
+        cur = self.mysql.connection.cursor()
+        cur.execute('select id, pais from paises')
+        data = cur.fetchall()
+        cur.close()
+        return data
+
+    def get_ciudades(self):
+        cur = self.mysql.connection.cursor()
+        cur.execute('select id, ciudad from ciudades')
+        data = cur.fetchall()
+        cur.close()
+        return data
+
+
     
 
     

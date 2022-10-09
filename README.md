@@ -2,7 +2,11 @@
 ## por primera vez se debe instalar el env
 - py -m venv env 
 ## activar el env
-- .\env\Scripts\activate 
+- .\env\Scripts\activate
+## instalar las librerias necesarias
+```
+pip install -r requirements.txt 
+```
 
 
 # guardar las librerias instaladas

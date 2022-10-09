@@ -1,5 +1,7 @@
+from urllib import request
 from flask import Flask, render_template, json, jsonify, Response
 from flask_mysqldb import MySQL
+from models.ModelNacionalidades import ModelNacionalidad
 
 from models.ModelPais import ModelPais
 app = Flask(__name__) 
@@ -46,14 +48,6 @@ def reservas():
 """
 Rutas de api
 """
-
-@app.route("/api/tipos_documento", methods = ['GET'])
-def get_tipos_documento():
-    return  Response(json.dumps(paises[0].__dict__), mimetype='application/json')
-
-@app.route("/api/nacionalidades", methods = ['GET'])
-def get_nacionalidades():
-    return  Response(json.dumps(paises[0].__dict__), mimetype='application/json')
 
 @app.route("/api/paises", methods = ['GET'])
 def get_paises():

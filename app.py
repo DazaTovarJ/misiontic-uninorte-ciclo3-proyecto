@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, json, url_for, Response, request
 from flask_mysqldb import MySQL
+from os import environ
 from models.ModelCiudad import ModelCiudad
 from models.ModelNacionalidades import ModelNacionalidad
 
@@ -8,10 +9,10 @@ from models.ModelTipoDocumento import ModelTipoDocumento
 from models.ModelUsuario import ModelUsuario
 app = Flask(__name__) 
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'example'
-app.config['MYSQL_DB'] = 'gestion_vuelos'
+app.config['MYSQL_HOST'] = environ.get("DB_HOST")
+app.config['MYSQL_USER'] = environ.get("DB_USER")
+app.config['MYSQL_PASSWORD'] = environ.get("DB_PASSWORD")
+app.config['MYSQL_DB'] = environ.get("DB_SCHEMA")
 db =  MySQL(app)
 
 @app.route('/')

@@ -4,7 +4,7 @@ from models.entities.Avion import Avion
 class ModelAvion:
 
     @classmethod
-    def get_aerolineas(self, db):
+    def get_aviones(self, db):
         cur = db.connection.cursor()
         cur.execute('select id, avion, modelo, capacidad, matricula, numero_de_silla, aerolineas_id from aviones')
         data = cur.fetchall()

@@ -5,7 +5,7 @@ class ModelCiudad():
     @classmethod
     def get_ciudades(self, db):
         cur = db.connection.cursor()
-        cur.execute('select id, ciudad, pais, from ciudades')
+        cur.execute('select id, ciudad, pais from ciudades order by pais, ciudad')
         data = cur.fetchall()
         cur.close()
         ciudades = []

@@ -22,8 +22,7 @@ Inicio
       José María Córdova de Medellín.
       Es la base para aviones privados y comerciales, además de ser la sede de la escuela de formación de pilotos
       Aeroccidente.</p>
-    <a class="btn btn-primary btn-dob" href="
-    {{url_for("about")}}"> CONÓCENOS </a>
+    <a class="btn btn-primary btn-dob" href="{{url_for('home.about')}}"> CONÓCENOS </a>
   </div>
   <div class="col-sm-12 col-lg-6">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -55,7 +54,7 @@ Inicio
 </div>
 <div class="row">
   <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
-    <form class="formulario-inicio p-4" method="POST" action="{{ url_for("registro") }}">
+    <form class="formulario-inicio p-4" method="POST" action="{{ url_for('auth.registro_inicial') }}">
       <fieldset>
         <legend>REGÍSTRATE AQUÍ</legend>
         <div class="row mb-3">
@@ -66,19 +65,13 @@ Inicio
             <input class="form-control" type="text" name="apellido" placeholder="Apellido">
           </div>
         </div>
-        <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Correo Electronico">
-        </div>
         <div class="row mb-3">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+          </div>
           <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
             <input type="password" class="form-control" name="password" placeholder="Contraseña">
           </div>
-          <div class="col-sm-12 col-md-6">
-            <input type="password" class="form-control" name="password_confirm" placeholder="Confirmar Contraseña">
-          </div>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="aceptar-politicas" name="aceptar_politicas">
-          <label class="form-check-label" for="aceptar-politicas">Acepto las politicas de privacidad</label>
         </div>
         <div class="row"><button type="submit" class="btn btn-primary btn-dob">REGISTRARSE </button></div>
 
@@ -96,11 +89,11 @@ Inicio
     </div>
     <div class="row">
       <div class="btn-group" role="group" aria-label="Basic example">
-        <a class="btn btn-primary text-bt-ligt" href="{{url_for("reservas")}}">
+        <a class="btn btn-primary text-bt-ligt" href="{{url_for('home.reservas')}}">
           <i class="bi bi-cart3"></i>
           RESERVAS
         </a>
-        <a class="btn btn-dark text-bt-ligt" href="{{url_for("ofertas")}}">
+        <a class="btn btn-dark text-bt-ligt" href="{{url_for('home.ofertas')}}">
           <i class="bi bi-tags-fill"></i>
           OFERTAS
         </a>

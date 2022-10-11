@@ -1,4 +1,7 @@
+@use "variables";
+
 img,
+iframe,
 table {
   max-width: 100%;
 }
@@ -8,33 +11,30 @@ strong {
 }
 
 .nav-principal {
-  color: #937D1B;
+  color: variables.$primary;
   font-weight: bold;
 }
-
 .g {
   font-size: 5rem;
   font-family: "Montserrat bold";
 }
-
 .formulario-reserva {
   color: white;
-  background-color: #1e1e1e;
+  background-color: variables.$dark;
   border-radius: 0.9rem;
+  legend {
+    font-family: "Montserrat bold";
+    text-align: center;
+    font-size: 2rem;
+  }
+  h6 {
+    text-align: center;
+  }
 }
-.formulario-reserva legend {
-  font-family: "Montserrat bold";
-  text-align: center;
-  font-size: 2rem;
-}
-.formulario-reserva h6 {
-  text-align: center;
-}
-
 button {
-  background-color: #937D1B;
+  background-color: variables.$primary;
   text-align: center;
-  color: white;
+  color: #ffff;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-family: "Montserrat";
@@ -42,9 +42,9 @@ button {
 }
 
 .bg-enc-text {
-  background-color: #937D1B;
+  background-color: variables.$primary;
   text-align: center;
-  color: white;
+  color: #ffff;
   padding: 0.25rem;
 }
 
@@ -54,12 +54,12 @@ button {
 
 .formulario-inicio {
   color: white;
-  background-color: #1e1e1e;
+  background-color: variables.$dark;
   border-radius: 0.9rem;
-}
-.formulario-inicio legend {
-  font-family: "Montserrat bold";
-  text-align: center;
+  legend {
+    font-family: "Montserrat bold";
+    text-align: center;
+  }
 }
 
 .pjustify {
@@ -69,9 +69,9 @@ button {
 }
 
 .btn-dob {
-  background-color: #937D1B;
+  background-color: variables.$primary;
   text-align: center;
-  color: white;
+  color: #ffff;
   font-size: 1rem;
   font-family: "Montserrat";
   padding: 0.25rem;
@@ -80,23 +80,21 @@ button {
 .sub-title {
   font-family: "Montserrat bold";
   text-align: center;
-  color: #937D1B;
+  color: variables.$primary;
   font-weight: bold;
   font-size: 2rem;
 }
-
 .acord-title {
   font-family: "Montserrat bold";
   text-align: center;
-  color: #937D1B;
+  color: variables.$primary;
   font-weight: bold;
   font-size: 1rem;
 }
-
 .btn-dark {
-  background-color: #1e1e1e;
+  background-color: variables.$dark;
   text-align: center;
-  color: white;
+  color: #ffff;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-family: "Montserrat";
@@ -104,9 +102,9 @@ button {
 }
 
 .pq-text {
-  background-color: #937D1B;
+  background-color: variables.$primary;
   text-align: center;
-  color: white;
+  color: #ffff;
   padding: 0.5rem;
 }
 
@@ -118,7 +116,7 @@ button {
 
 .aviso-reserva {
   text-align: justify;
-  color: white;
+  color: #ffff;
   font-size: 1.5rem;
   font-family: "Montserrat bold";
   padding: 0.5rem;
@@ -130,7 +128,7 @@ button {
   font-size: 1.5rem;
   display: inline-block;
   color: rgb(81, 6, 6);
-  border: 2px solid #937D1B;
+  border: 2px solid variables.$primary;
   border-radius: 0.5rem;
   max-width: 100%;
   padding: 0.5rem;
@@ -138,7 +136,7 @@ button {
 
 .text-bt-ligt {
   text-align: center;
-  color: white;
+  color: #ffff;
   text-align: center;
   font-family: "Montserrat";
-}/*# sourceMappingURL=stilos.css.map */
+}

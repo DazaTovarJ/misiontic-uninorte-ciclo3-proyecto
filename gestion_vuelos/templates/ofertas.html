@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block titulo %}
+Ofertas
+{% endblock titulo %}
+{% block contenido %}
+
+    <div class="row mb-3">
+        <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
+          <h3>
+            <span class="m">CONOCE NUESTRAS</span>
+            <span class="g">OFERTAS</span><br>
+           
+           </h3>
+         
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+            vulputate velit esse molestie consequat</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit">RESERVA <a href="{{url_for('ofertas')}}"></a></button>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <img class="img-fluid" src="{{url_for('static', filename='/images/aeropuerto/los-mejores-destinos-para-viajar-fin-de-ano.jpg')}}" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" >
+          </div>
+          <div class="row row-cols-1 row-cols-md-5 g-3">
+            <div class="col">
+              <h5 class="bg-enc-text">CARTAGENA</h5>
+              <div class="card h-100">
+                <img src="{{url_for('static', filename='images/aeropuerto/bocagrande-desde-el-hotel.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <small class="text-muted nav-link nav-principal href= #">Cartagena es una de las ciudades más norteñas
+                    de Colombia,
+                    situada a lo largo de la costa del Caribe.  <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> Haga clic aquí para conocer las aerolineas</a> </small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h5 class="bg-enc-text">BOGOTA</h5>
+              <div class="card h-100">
+                <img src="{{url_for('static', filename='images/aeropuerto/bogota.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <small class="text-muted nav-link nav-principal href= #">
+                    Bogotá, un lugar popular lleno de cultura, edificios históricos y modernos centros de negocios y
+                    entretenimiento.  <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> Haga clic aquí para conocer las aerolineas</a></small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h5 class="bg-enc-text">MEDELLIN</h5>
+              <div class="card h-100">
+                <img src="{{url_for('static', filename='images/aeropuerto/medellin.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <small class="text-muted nav-link nav-principal href= #">Medellín es la segunda ciudad más grande de
+                    Colombia,
+                    lo que la hace muy popular con turistas y viajeros de negocios. <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> Haga clic aquí para conocer las aerolineas</a> </small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h5 class="bg-enc-text">PASTO</h5>
+              <div class="card h-100">
+                <img src="{{url_for('static', filename='images/aeropuerto/pasto_4_0.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <small class="text-muted nav-link nav-principal href= #">Pasto es la segunda ciudad más grande de
+                    Colombia,
+                    lo que la hace muy popular con turistas y viajeros de negocios.  <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> Haga clic aquí para conocer las aerolineas</a></small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <h5 class="bg-enc-text">MANIZALES</h5>
+              <div class="card h-100">
+                <img src="{{url_for('static', filename='images/aeropuerto/IMG_1222.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <small class="text-muted nav-link nav-principal href= #">Manizales es la segunda ciudad más grande de
+                    Colombia,
+                    lo que la hace muy popular con turistas y viajeros de negocios. <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> Haga clic aquí para conocer las aerolineas</a></small>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">dsdsds</div>
+          </div>
+         
+      </div>
+      {%endblock%}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>{%block titulo%} {%endblock%} | Aeropuerto Alfonso Bonilla Aragon</title>
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet"
+    href="{{url_for('static', filename='node_modules/bootstrap-icons/font/bootstrap-icons.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/stilos.css')}}">
+  {%block styles%}
+  {%endblock%}
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid flex-column flex-lg-row">
+        <a class="navbar-brand" href="{{url_for('home.index')}}">
+          <img src="{{url_for('static', filename='images/aeropuerto/logoaerocali.png')}}" width="60"
+            alt="logo principal" />
+          <span class="d-none d-lg-inline">AEROPUERTO <strong>ALFONSO BONILLA ARAGON</strong></span>
+        </a>
+        <ul class="nav ms-lg-auto">
+          <!-- <div class="mx-auto" style="width: 700px;"></div> -->
+          <li class="nav-item">
+            <a class="nav-link nav-principal" href="#" id="dropdownId" data-bs-toggle="modal"
+              data-bs-target="#login-modal">
+              <i class="bi bi-person-circle"></i>
+              Iniciar sesión
+            </a>
+
+            <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modal-title"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="login-modal-title">INICIAR SESIÓN</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="login-form" method="POST" action="{{url_for('auth.login')}}">
+                      <div class="mb-3">
+                        <label for="username" class="col-form-label">USUARIO:</label>
+                        <input type="email" class="form-control" id="username" name="email" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label">CONTRASEÑA:</label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button type="submit">BUSCAR</button>
+        </form>
+      </div>
+    </nav>
+    <!-- añadio sombra en el cabezote <div class="shadow p-3 mb-5 bg-body rounded"> -->
+    <div class="shadow p-3 mb-5 bg-body rounded">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav w-90 justify-content-md-between mt-5 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-principal" href="{{url_for('home.index')}}">
+                INICIO </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-principal" href="{{url_for('home.about')}}">CONÓCENOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-principal" href="{{url_for('home.travel')}}">VUELOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-principal" href="{{url_for('home.registro')}}">REGISTRO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-principal" href="{{url_for('home.contacto')}}">ATENCIÓN AL USUARIO</a>
+            </li>
+        </div>
+      </nav>
+      </ul>
+    </div>
+
+  </header>
+  <main class="container-fluid">
+    {%block contenido%}
+    {%endblock%}
+  </main>
+  <footer class="mt-4">
+    <p class="text-center">AEROCALI</p>
+    <p class="text-center">&copy; AEROPUERTO ALFONSO BONILLA ARAGON</p>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">TÉRMINOS Y CONDICIONES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">POLÍTICAS DE PRIVACIDAD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">POLÍTICA DE COOKIES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">MAPA DEL SITIO</a>
+      </li>
+    </ul>
+    <div class="nav justify-content-evenly">
+      <img src="{{url_for('static', filename='images/Grupo-11376@2x.png')}}" alt="" width="30" height="30" />
+      <img src="{{url_for('static', filename='images/iconos/Logo-aeronautica.png')}}" height="30" alt="" />
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-twitter"></i>
+    </div>
+
+  </footer>
+  <script src="{{url_for('static', filename='node_modules/@popperjs/core/dist/umd/popper.min.js')}}">
+  </script>
+
+  <script src="{{url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}">
+  </script>
+  {%block js%}
+  {%endblock%}
+</body>
+
+</html>

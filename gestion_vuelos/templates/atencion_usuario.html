@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Atencion_usuario
+{% endblock titulo %}
+
+{% block contenido %}
+
+<div class="row">
+  <div class="col">
+    <h3>PQRS (Peticiones, Quejas, Reclamos y Sugerencias) <br> </h3>
+    <h6>En esta sección usted podrá radicar, hacer seguimiento y consultar los informes de PQRS.<br></h6>
+    <p>Para AEROCLI es importante conocer su opinión, resolver sus dudas y atender sus quejas y sugerencias.
+      Por tanto, y bajo el principio de transparencia, buscamos trabajar en la mejora continua de los servicios
+      que ofrecemos realizando un seguimiento continuo a sus PQRS. </p>
+    <p>A continuación describimos en detalle cada opción para facilitar su registro: </p>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Peticion.png')}}" alt="Icono Petición">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Petición</strong>
+        <span class="ms-rteFontSize-2">: Son solicitudes o requerimientos que hace una persona a la Entidad, con el
+          propósito de requerir su intervención y respuesta.
+          Los tiempos de respuesta varían de acuerdo a la clasificación de la siguiente manera:
+          Interés general o particular - quince (15) días.
+          Consulta - treinta (30) días.
+          Información y documentación - diez (10) días.</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Queja.png')}}" alt="Icono Queja">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Queja</strong>
+        <span class="ms-rteFontSize-2">: Es la manifestación de desacuerdo,
+          insatisfacción o descontento que un ciudadano puede presentar al recibir una atención inadecuada por
+          parte de un servidor público de AEROCALI.</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Reclamo.png')}}" alt="Icono Reclamo">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Reclamo</strong>
+        <span class="ms-rteFontSize-2">: Es la exigencia que realiza un usuario porque no se prestó algún servicio o
+          se hizo de manera irregular.</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Denuncia.png')}}" alt="Icono Denuncia">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Denuncia</strong>
+        <span class="ms-rteFontSize-2">: Es la acción que emprende la ciudadanía para exponer ante AEROCALI actos
+          sospechosos o
+          posibles hechos de corrupción que están realizando personas a nombre de la Entidad o que se están haciendo
+          al interior de la misma.</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Sugerencia.png')}}" alt="Icono Sugerencia">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Sugerencia</strong>
+        <span class="ms-rteFontSize-2">: Es un planteamiento que se presenta con el objetivo de proponer un cambio o
+          mejora de algún servicio,
+          producto o proceso de la Entidad.</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: left;">
+      <div class="col-sm-1">
+        <img src="{{url_for('static', filename='images/iconos/Felicitacion.png')}}" alt="Icono Felicitacion">
+      </div>
+      <div class="col-sm-11">
+        <strong class="ms-rteFontSize-2">Felicitación</strong>
+        <span class="ms-rteFontSize-2">: Expresión de satisfacción por parte de los usuarios frente a la Entidad,
+          sus servicios o servidores.</span>
+      </div>
+    </div>
+
+    <label for="FormControl" class="form-label"></label>
+    <div class="col">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37885.00715740168!2d-76.38677710112879!3d3.54804959927214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3a06be9a30dc11%3A0x9149d63166d2377!2sAeropuerto%20Internacional%20Alfonso%20Bonilla%20Aragon!5e0!3m2!1ses!2sco!4v1665029301799!5m2!1ses!2sco"
+        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="col">
+    <!-- <div id="vfb-form-2" class="visual-form-builder-container">  -->
+    <!-- <form   class="formulario-inicio p-4">-->
+    <fieldset>
+      <h2 class="bg-enc-text">INGRESA AQUI TUS DATOS </h2>
+      <div class="row mb-3">
+        <label for="FormControl" class="form-label"></label>
+        <div class="col"> <input class="form-control" type="text" name="nombre-apellido"
+            placeholder="NOMBRE Y APELLIDO"></div>
+        <div class="col">
+          <input class="form-control" list="datalistOptions" id="DataList" placeholder="CIUDAD">
+          <datalist id="datalistOptions">
+            <option value="Leticia">
+            <option value="Madellín">
+            <option value="Arauca">
+            <option value="Barranquilla">
+            <option value="Cartagena">
+            <option value="Tunja">
+            <option value="Manizalez">
+            <option value="Florencia">
+            <option value="Yopal">
+            <option value="Popayán">
+            <option value="Valledupar">
+            <option value="Quibdó">
+            <option value="Monteria">
+            <option value="Bogotá">
+            <option value="Neiva">
+            <option value="Riohacha">
+            <option value="Santa Marta">
+            <option value="Villavicencio">
+            <option value="Cúcuta">
+            <option value="Armenia">
+            <option value="Bucaramanga">
+            <option value="Ibague">
+            <option value="Cali">
+            <option value="Mitú">
+          </datalist>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="FormControl" class="form-label"></label>
+        <div class="col"> <input class="form-control" type="text" name="id-pasajero" placeholder="ID DE PASAJERO">
+        </div>
+        <div class="col"> <input type="date" class="form-control" name="fecha" placeholder="FECHA"></div>
+      </div>
+      <div class="row mb-3">
+        <label for="FormControl" class="form-label"></label>
+        <div class="col"> <input class="form-control" type="text" name="telefono" placeholder="TELEFONO"></div>
+        <div class="col">
+          <select class="form-select">
+            <option selected>SELECCIONE TIPO DE SERVICIO</option>
+            <option value="1">Petición</option>
+            <option value="2">Queja</option>
+            <option value="3">Reclamo</option>
+            <option value="4">Denuncia</option>
+            <option value="5">Sugerencia</option>
+            <option value="6">Felicitación</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="FormControl" class="form-label"></label>
+        <div class="col"><input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+        </div>
+        <div class="col">
+          <input class="form-control" list="datalistOption" id="DataList" placeholder="AREA DE SOLICITUD">
+          <datalist id="datalistOption">
+            <option value="AEROPUERTO">
+            <option value="AEROLINEA">
+          </datalist>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="FormControlTextarea1" class="form-label"></label>
+        <textarea class="form-control" id="FormControlTextarea1" rows="12"
+          placeholder="COMENTARIOS Y OBSERVACIONES"></textarea>
+      </div>
+      <label for="FormControl" class="form-label"></label>
+      <div class="d-grid"><button type="submit">ENVIAR</button></div>
+      <label for="FormControl" class="form-label"></label>
+    </fieldset>
+
+  <div>
+        <div class="row">
+         
+            <div class="nav-principal">
+              <h2><i class="bi bi-geo-alt-fill"></i> CONTACTENOS <br></h2>
+            </div>
+            <p><span class="ms-rteFontSize-2"> VIA PALMIRA KM 3</span></p>
+            <p><span class="ms-rteFontSize-2"> PALMIRA - VALLE DEL CAUCA</span></p>
+            <p><span class="ms-rteFontSize-2"> COLOMBIA</span></p>
+          </div>
+          <div class="col">
+            <p><span class="ms-rteFontSize-2"> 602 669 3547</span></p>
+            <p><span class="ms-rteFontSize-2"> 01 8000 9751466</span></p>
+            <p><span class="ms-rteFontSize-2"> info@aeroalfonsobonillaaragon.com</span></p>
+            <p><span class="ms-rteFontSize-2"> atencionalciudadano@aeroalfonsobonillaaragon.com</span></p>
+          </div>
+        </div>
+       
+          </div>
+        </div>
+        </div>
+      
+      </div>
+    </div>
+    </div>
+    
+  {%endblock%}

@@ -1,0 +1,104 @@
+{%extends "base.html" %}
+{%block titulo %}
+Inicio
+{%endblock%}
+{%block contenido %}
+<div class="row mb-3">
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
+    <h3>
+      <span class="ps-5">AEROPUERTO</span><br>
+      <span class="g">ALFONSO</span><br>
+      <span class="m">BONILLA ARAGÓN</span>
+    </h3>
+
+    <p class="pjustify">El Aeropuerto Internacional Alfonso Bonilla Aragón (anteriormente llamado Aeropuerto
+      Internacional de
+      Palmaseca)
+      (IATA: CLO, OACI: SKCL) localizado en el corregimiento de Palmaseca del municipio de Palmira, Valle del Cauca,
+      Colombia, sirve a la ciudad de Cali. Fue inaugurado en 1971. En la actualidad, es el tercer aeropuerto de
+      Colombia
+      en movimiento de pasajeros, después del Aeropuerto El Dorado de la ciudad de Bogotá y el Aeropuerto
+      Internacional
+      José María Córdova de Medellín.
+      Es la base para aviones privados y comerciales, además de ser la sede de la escuela de formación de pilotos
+      Aeroccidente.</p>
+    <a class="btn btn-primary btn-dob" href="{{url_for('home.about')}}"> CONÓCENOS </a>
+  </div>
+  <div class="col-sm-12 col-lg-6">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{url_for('static', filename='/images/aeropuerto/AIABA-Finales-39-2-scaled.jpg')}}"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{{url_for('static', filename='/images/aeropuerto/4-pasos-para-hacer-realidad-ese-viaje-que-no-has-podido-emprender.jpg')}}"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='/images/aeropuerto/1561110509001.jpg')}}" class="d-block w-100"
+            alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
+    <form class="formulario-inicio p-4" method="POST" action="{{ url_for('auth.registro_inicial') }}">
+      <fieldset>
+        <legend>REGÍSTRATE AQUÍ</legend>
+        <div class="row mb-3">
+          <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+            <input class="form-control" type="text" name="nombre" placeholder="Nombre">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <input class="form-control" type="text" name="apellido" placeholder="Apellido">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+          </div>
+          <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+          </div>
+        </div>
+        <div class="row"><button type="submit" class="btn btn-primary btn-dob">REGISTRARSE </button></div>
+
+      </fieldset>
+
+    </form>
+  </div>
+  <div class="col-sm-12 col-lg-6">
+    <div class="row">
+      <div class="col"><img class="img-fluid"
+          src="{{url_for('static', filename='images/aeropuerto/reserva_vuelo_gettyrf_1207226731_sankai_getty_images.jpg')}}"
+          alt=""></div>
+      <div class="col"><img class="img-fluid"
+          src="{{url_for('static', filename='images/aeropuerto/finanzasalviajar.jpg')}}" alt=""></div>
+    </div>
+    <div class="row">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a class="btn btn-primary text-bt-ligt" href="{{url_for('home.reservas')}}">
+          <i class="bi bi-cart3"></i>
+          RESERVAS
+        </a>
+        <a class="btn btn-dark text-bt-ligt" href="{{url_for('home.ofertas')}}">
+          <i class="bi bi-tags-fill"></i>
+          OFERTAS
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

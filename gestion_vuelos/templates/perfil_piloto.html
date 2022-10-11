@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% block titulo %}
+Registro
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <div class="row mb-4">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
+          
+          <div class="nav-principal bg-enc-text"> <h1>PERFIL DE PILOTO <br></h1>
+          </div>        
+          <label for="FormControl" class="form-label"></label>
+          <div class="row gx-5">
+           <div class="col">
+             <div class="row" > <img class="img-fluid" src="{{url_for('static', filename='images/iconos/aerolineas/Latam-logo.jpg')}}"  alt="logoLatamAirlines">
+             </div>
+          <div class="row" > <img class="img-fluid" src="{{url_for('static', filename='images/aeropuerto/disfraz-de-piloto-de-mile-high-para-hombre.jpg')}}"  alt="piloto">
+        </div>
+        <h5 class="bg-enc-text">ID DE PILOTO</h5>
+        <div class="col"> <span class="container pilot-text">SDGE578</span></div> 
+        <label for="FormControl" class="form-label"></label>         
+           </div>
+           <div class="col-sm-8">
+             <label for="FormControl" class="form-label"></label>
+             <h2>JHON DOE ZAAR <br> </h2>
+             <label for="FormControl" class="form-label"></label>
+             <P></P>
+             <p><strong class="ms-rteFontSize-2">FECHA DE NACIMIENTO</strong>
+             <span class="ms-rteFontSize-2">: 03/15/187 </span></p>
+             <p><strong class="ms-rteFontSize-2">NACIONALIDAD</strong>
+             <span class="ms-rteFontSize-2">: AMERICANO </span></p>
+             <p><strong class="ms-rteFontSize-2">LUGAR DE NACIMIENTO</strong>
+             <span class="ms-rteFontSize-2">: MASACHUSEN </span></p>
+             <p><strong class="ms-rteFontSize-2">TIPO DE SANGRE</strong>
+             <span class="ms-rteFontSize-2">: A <b>RH: </b>+</span></p>
+             <p><strong class="ms-rteFontSize-2">PILOTO CATEGORÍA</strong>
+             <span class="ms-rteFontSize-2">: <b>A</b> </span></p>
+             <p><strong class="ms-rteFontSize-2">CELULAR</strong>
+             <span class="ms-rteFontSize-2">: +1 869 3475  65+ </span></p>
+             <p><strong class="ms-rteFontSize-2">DIRECCION</strong>
+             <span class="ms-rteFontSize-2">: AV. STANFOR 87-21 </span></p>
+             <p><strong class="ms-rteFontSize-2">CIUDAD</strong>
+             <span class="ms-rteFontSize-2">: MASACHUSEN</span></p>
+             <p><strong class="ms-rteFontSize-2">E-MAIL</strong>
+             <span class="ms-rteFontSize-2">: JHONDZR4795@GMAIL.COM</span></p>
+             <p><strong class="ms-rteFontSize-2">CONTACTO DE EMRGENCIA</strong>
+             <span class="ms-rteFontSize-2">: +1 878 347578+ </span></p> 
+             <label for="FormControl" class="form-label"></label>
+           </div>
+         </div>
+
+          <div class="container col-12">
+            <div class="row">
+              <div class="col-12">
+               
+                <label for="FormControl" class="form-label"></label>
+                <div class="col-sm-10 col-lg-12">
+                  <h3 class="card-title bg-enc-text">NOTIFICACIÓN DE EVENTOS</h3>
+                  <label for="FormControl" class="form-label"></label>
+                  <div class="card col-sm-12 col-sm-10">
+                    <div class="card-body">      
+                
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"><b>DESTINO</b></label>
+                    <select class="form-select" id="validationCustom01" required>
+                      <option selected disabled value=""></option>
+                      <option>BOGOTÁ</option>
+                      <option>MEDELLÍN</option>
+                      <option>CARTAGENA</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor seleccionar un destino válido.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label"><b>AVIÓN</b></label>
+                    <select class="form-select" id="validationCustom02" required>
+                      <option selected disabled value=""></option>
+                      <option>Boeing 737</option>
+                      <option>Boeing 747</option>
+                      <option>Boeing 777-200</option>
+                      <option>Airbus 340</option>
+                      <option>Airbus 319</option>
+                      <option>Airbus A320</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor seleccionar un avión válido.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="FormControlTextarea1" class="form-label"><b>DETALLE</b></label>
+                    <textarea class="form-control" id="FormControlTextarea1" rows="3"  ></textarea>    
+                    </div>
+                  
+                  <div class="col-md-4">
+                    <label for="validationCustom03" class="form-label"><b>HORA</b></label>
+                    <input type="time" class="form-control" name="hora" placeholder="HORA" id="validationCustom03" required></div> 
+                    <div class="invalid-feedback">
+                      Por favor ingrese la hora.
+                    </div>
+                  
+                
+                  <div class="col-md-4">
+                    <label for="validationCustom04" class="form-label"><b>ESTADO</b></label>
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value=""></option>
+                      <option>Óptimo</option>
+                      <option>En espera</option>
+                      <option>Retrasado</option>
+                      <option>Arrivando</option>
+                      <option>Saliendo</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <label for="FormControl" class="form-label"></label>
+                    <button class="row" type="submit">ACTUALIZAR</button>
+                  </div>
+                </div>
+                </div>
+                </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-sm-12 col-lg-6">
+            <div class="card col-sm-12 col-sm-10">
+              <div class="card-body">
+                <h3 class="card-title bg-enc-text">DETALLES DE VUELOS</h3>
+               
+                <div class="card-body">
+                  
+                  
+  <div class="bg-success p-4 text-dark bg-opacity-10">
+  <div class="container">
+    <div class="row row-cols-5">
+      <div class="col"><b>CALI </b>ALFONSO B ARAGÓN INTL</div>
+      <div class="col"><b>BOGOTA </b>EL DORADO INTL</div>
+      <div class="col">AV9204</div>
+      <div class="col"><b>17:29</b></div>
+      <div class="col"><b>18:30</b></div>
+      <div class="col"></div>
+      <div class="col">TERMINAL: 1</div>
+      <div class="col"></div>
+      <div class="col">11 OCT 2022</div>
+      <div class="col">11 OCT 2022</div>
+      <label for="FormControl" class="form-label"></label>
+    </div>
+  </div>
+ 
+</div>
+  
+<div class="p-4 text-dark bg-opacity-10"></div>
+  <div class="container">
+    <div class="row row-cols-5">
+      <div class="col"><b>CALI </b>ALFONSO B ARAGÓN INTL</div>
+      <div class="col"><b>BOGOTA </b>EL DORADO INTL</div>
+      <div class="col">AV9204</div>
+      <div class="col"><b>17:29</b></div>
+      <div class="col"><b>18:30</b></div>
+      <div class="col"></div>
+      <div class="col">TERMINAL: 1</div>
+      <div class="col"></div>
+      <div class="col">11 OCT 2022</div>
+      <div class="col">11 OCT 2022</div>
+      <label for="FormControl" class="form-label"></label>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="bg-success p-4 text-dark bg-opacity-10">
+  <div class="container">
+    <div class="row row-cols-5">
+      <div class="col"><b>CALI </b>ALFONSO B ARAGÓN INTL</div>
+      <div class="col"><b>BOGOTA </b>EL DORADO INTL</div>
+      <div class="col">AV9204</div>
+      <div class="col"><b>17:29</b></div>
+      <div class="col"><b>18:30</b></div>
+      <div class="col"></div>
+      <div class="col">TERMINAL: 1</div>
+      <div class="col"></div>
+      <div class="col">11 OCT 2022</div>
+      <div class="col">11 OCT 2022</div>
+      <label for="FormControl" class="form-label"></label>
+    </div>
+  </div>
+  
+
+</div>
+  
+<div class=" p-4 text-dark bg-opacity-10">
+  <div class="container">
+    <div class="row row-cols-5">
+      <div class="col"><b>CALI </b>ALFONSO B ARAGÓN INTL</div>
+      <div class="col"><b>BOGOTA </b>EL DORADO INTL</div>
+      <div class="col">AV9204</div>
+      <div class="col"><b>17:29</b></div>
+      <div class="col"><b>18:30</b></div>
+      <div class="col"></div>
+      <div class="col">TERMINAL: 1</div>
+      <div class="col"></div>
+      <div class="col">11 OCT 2022</div>
+      <div class="col">11 OCT 2022</div>
+      <label for="FormControl" class="form-label"></label>
+    </div>
+  </div>
+ </div>
+
+  </div>
+  
+              </div>
+            </div>
+             
+            </div>
+          </div>
+        </div>
+        {%endblock%}

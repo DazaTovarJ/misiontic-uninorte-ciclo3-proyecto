@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% block titulo %}
+Reservas
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <div class="row mb-3">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 mb-3 mb-lg-0">
+          <form class="formulario-reserva p-4 mb-3">
+            <fieldset>
+            <legend>RESERVA TU VUELO</legend>
+            <h6>DESTINO</h6>
+              <div class="row mb-3">
+                <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+                  <input class="form-control" type="text" name="origen" placeholder="DESDE">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <input class="form-control" type="text" name="destino" placeholder="HACIA">
+                </div>
+              </div>
+              <h6>FECHA DE VIAJE</h6>
+              <div class="row mb-3">
+                <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+                  <input type="date" class="form-control" name="salida">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <input type="date" class="form-control" name="vuelta" >
+                </div>
+              </div>
+              <h6>QUIEN VIAJA</h6>
+              <div class="row mb-3">
+                <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
+                  <input type="number" class="form-control" name="adulto" placeholder="ADULTO">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <input type="number" class="form-control" name="nino" placeholder="NIÑO">
+                </div>
+              </div>
+              <div class="mb-3 form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="ida-vuelta" name="ida_vuelta">
+                <label class="form-check-label" for="ida-vuelta">Ida y Vuelta</label>
+              </div>
+              <div class="mb-3 form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="solo-ida" name="solo_ida">
+                <label class="form-check-label" for="solo-ida">Solo Ida</label>
+              </div>
+              <div class="row"><button type="submit">BUSCAR VUELOS</button></div>
+            </fieldset>
+          </form>
+
+         
+
+          <div class="container col-12">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="bg-enc-text"> INSTRUCCIONES DE EQUIPAJE </h3>
+  
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                        ELEMENTOS PROHIBIDOS
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Elementos prohibidos
+                        De acuerdo al Reglamento Aeronáutico Colombiano (RAC), existen artículos que no pueden ser transportados en el equipaje de mano,
+                        razón por la cual el personal de seguridad del filtro de control de ingreso a las salas de abordaje no permite su paso. Los artículos
+                        prohibidos tendrán el manejo y la disposición final establecidos en el Plan de seguridad del Aeropuerto Alfonso Bonilla Aragon 
+                      (Aprobado por la Aeronáutica Civil) y no podrán recuperarlos en ningún momento.
+                        
+                        Podrá conocer previamente estas restricciones, a través de las ayudas visuales ubicadas antes del ingreso a los filtros de seguridad,
+                        en las cuales mediante una maleta a escala se exhiben los elementos que no están permitidos en el equipaje de mano.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                        EQUIPAJE DE MANO
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Vuelos nacionales
+                         <a  href="{{url_for('static', filename='/images/otros/prohibido_equipaje_manoPNG.PNG')}}">Conozca aquí</a> los elementos prohibidos en el equipaje de mano para vuelos nacionales.
+                        
+                        Vuelos Internacionales
+                        <a  href="{{url_for('static', filename='/images/otros/prohibido_equipaje_mano_internacional.PNG')}}">Conozca aquí</a> los elementos prohibidos en el equipaje de mano para vuelos internacionales.
+                        
+                        Restricciones especiales
+                        No se permite el ingreso de elementos LAGs  (Líquidos, Aerosoles y Geles) en envases superiores a 100 ml, 100 gr o 3.4 oz.
+                        
+                        Para los vuelos hacia Estados Unidos, no se permite el transporte de sustancias en polvo y granulados superiores a 12 onzas (340 gr)</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                       EQUIPAJE DE BODEGA
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Si su vuelo es nacional o internacional, tenga en cuenta los siguientes elementos que no son permitidos en el equipaje de bodega.
+                        <a  href="{{url_for('static', filename='/images/otros/elementos_no_permitidos.PNG')}}"> Haga clic aquí para conocerlos.</a> </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                        PESO
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">l peso y las dimensiones máximas permitidas del equipaje de bodega en todos los destinos por pasajero son; 23 kg
+                        en Clase económica y 32 kg en Clase ejecutiva (este peso solo aplica para la tarifa XXL y para la primera pieza de equipaje de la tarifa XL),
+                        adicionalmente no debe superar los 158 centímetros lineales equivalentes a la suma de las dimensiones exteriores (alto+largo+ancho).
+                        Si superas las dimensiones o el peso definidos, deberás pagar el costo por sobredimensión y/o el valor del equipaje adicional más el costo por sobrepeso.
+                        Por regulación de equipaje, para vuelos desde/hacia Europa no es posible superar el peso de 32 kg por pieza, incluso si pagas el sobrepeso.  
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                        CARGA ADICIONAL
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Cuando tu equipaje excede las dimensiones y peso permitidos, tendrás un cargo adicional por “sobrepeso” y “sobredimensión”
+                        para ser transportado. Este cargo se aplicará a todas las piezas de equipaje que se encuentren por encima de las medidas estándar, ten en cuenta el peso
+                        y las medidas que debe tener tu equipaje de bodega. </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed acord-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix"><i class="bi bi-briefcase-fill"></i>&nbsp;
+                        MASCOTAS
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Este es un documento guía para el ingreso, control y la tenencia adecuada de mascotas durante la permanencia de estas
+                         y su persona responsable en el Aeropuerto Alfonso Bonilla Aragon.
+                         Para la movilización dentro del territorio nacional de perros y gatos, no se requiere certificación sanitaria del ICA. Sin embargo,
+                         es necesario que se ponga en contacto con su aerolínea para conocer directamente los requisitos que debe tener en cuenta al momento
+                         de viajar en compañía de su mascota .<a  href="{{url_for('static', filename='/enlaces_manuales/20210514_manual mascotas el dorado.pdf')}}"> Conozca aqui el manual de tenencia de mascotas</a>
+
+                         <a  href="{{url_for('static', filename='/enlaces_manuales/GUIAPARAMASCOTASAIED_1.pdf')}}"> .Haga clic aquí para conocer</a>  la guía de control y tenencia de mascotas en el Aeropuerto </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="card col-sm-12 col-sm-10">
+              <div class="card-body">
+                <h3 class="card-title bg-enc-text">DETALLES DE VUELOS</h3>
+                <div class="img-fondo aviso-reserva">
+                  <div class="row mb-4"> <p> Querido usuario </p> 
+                    <h3>Tu reserva a sido confirmada</h3>
+                    <p class="aviso-reserva">Gracias por tu compra</p>
+                  </div>
+                </div>
+               
+                <div class="container-fluid">
+                  <div class="row gx-5">
+                    <div class="col">
+                     <div class="p-3 border bg-light">
+                     <h3 class="mb-3">ESTADO DE LA COMPRA</h3>
+                     <div class="row mb-3">
+                      <h5 class="col form-check-inline">Codigo de reserva:</h5>
+                    <h5 class="col form-check-inline">Estado del pago: </h5></div>
+                    
+                     <div class="row mb-3">
+                      <h5 class="col form-check-inline">Metodo de pago:</h5>
+                      <h5 class="col form-check-inline">Cantidad a pagar: </h5>
+                    </div>
+                    
+                    </div>
+                 </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+            <h3 class="bg-enc-text">ESTADO DE VUELOS</h3>
+            <div class="row mb-5">
+              <div class="col nav-principal"> AEROLINEA
+               </div>
+              <div class="col nav-principal"> SALIDA </div> 
+              <div class="col nav-principal"> LLEGADA </div> 
+            </div>
+          <div class="row mb-5">
+              <div class="col nav-principal"> AEROLINEA
+               </div>
+              <div class="col nav-principal"> SALIDA </div> 
+              <div class="col nav-principal"> LLEGADA </div> 
+            </div>
+            
+            <div class="row">
+              <img src="{{url_for('static', filename='/images/aeropuerto/reserva_vuelo_gettyrf_1207226731_sankai_getty_images.jpg')}}" width="300" height="200" alt="">
+              <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+               
+                <button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                  <path
+                    d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+                </svg>&nbsp;<a class="text-bt-ligt" href="{{url_for('travel')}}">OFERTAS </a></button>
+               </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+ 
+{%endblock%}

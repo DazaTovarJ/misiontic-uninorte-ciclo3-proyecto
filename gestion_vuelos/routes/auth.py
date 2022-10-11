@@ -51,7 +51,7 @@ def register():
     nacionalidad = int(request.form.get("nacionalidad", ""))
     correo = request.form.get("email", "")
     email_confirm = request.form.get("email_confirm", correo)
-    password = request.form.get("password", "")
+    password = generate_password_hash(request.form.get("password", ""))
     password_confirm = request.form.get("password_confirm", password)
     telefono = request.form.get("phone", "")
     address = request.form.get("address")

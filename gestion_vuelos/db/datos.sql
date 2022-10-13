@@ -245,3 +245,10 @@ values  ('Airbus', 'A350-1000', 2, 'HDA325', '80', 1),
         ('Airbus', 'A340', 1, 'JHT685', '60', 6),
         ('Airbus', '320', 2, 'KUY', '70', 5),
         ('Boeing', '777', 2, 'DFE', '90', 2);
+
+-- Usuarios
+        insert into gestion_vuelos.usuarios (id, tipo_documento, identificacion, nombre, apellido, fecha_de_nacimiento, ciudad, pais, genero, correo, contrasena, telefono, nacionalidad, tipo_de_sangre, rol, categoria, aerolinea, creado, actualizado, estado)
+values  (4, 1, '123456', 'Lilia', 'Soto', '2000-06-27', 10, 1, 'F', 'lilasoto@uninorte.edu.co', '12345678', '31380384845', 13, '', 3, null, null, '2022-10-09 22:20:51', '2022-10-09 22:20:51', 1),
+        (6, 1, '1092546789', 'Prueba', 'prueba', '2001-02-09', 12, 1, 'M', 'prueba@mimail.com', '789456', '31598745612', 13, '', 3, null, null, '2022-10-09 22:38:28', '2022-10-09 22:38:28', 1),
+        (7, 1, '4505878', 'pepito', 'soler', '1973-06-12', 9, 1, 'M', 'pepito@hotmail.com', 'pepe21', '25415233', 7, '', 3, null, null, '2022-10-11 19:10:42', '2022-10-11 19:10:42', 1),
+        (9, 1, '76790345', 'lucia', 'Solano', '2022-10-19', 9, 1, 'F', 'lucia@hotmail.com', 'luci22', '254125', 12, '', 3, null, null, '2022-10-11 19:34:53', '2022-10-11 19:34:53', 1);

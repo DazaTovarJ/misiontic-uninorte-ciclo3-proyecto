@@ -8,7 +8,7 @@ class ModelUsuario:
         conn = get_connection()
         user = None
         with conn.cursor() as cur:
-            query = "select * from usuarios where id = %d AND estado = 1"
+            query = "select * from usuarios where id = %s AND estado = 1"
             info = (id)
             cur.execute(query, info)
             user = cur.fetchone()
@@ -32,12 +32,12 @@ class ModelUsuario:
         return user
 
     @classmethod
-    def obtener_por_correo_y_contrasena(cls, correo, contrasena):
+    def obtener_por_correo_login(cls, correo):
         conn = get_connection()
         user = None
         with conn.cursor() as cur:
-            query = """select id, correo, contrasena, nombre, apellido from usuarios where correo = %s AND contrasena = %s AND estado = 1"""
-            info = (correo, contrasena)
+            query = """select id, correo, contrasena, nombre, apellido from usuarios where correo = %s AND estado = 1"""
+            info = (correo)
             cur.execute(query, info)
             user = cur.fetchone()
         conn.close()

@@ -25,41 +25,52 @@
         </a>
         <ul class="nav ms-lg-auto">
           <!-- <div class="mx-auto" style="width: 700px;"></div> -->
+          {% if session and 'user_nombre' in session %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+              Bienvenido, {{session['user_nombre']}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{url_for('auth.logout')}}">cerrar sesión</a></li>
+            </ul>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link nav-principal" href="#" id="dropdownId" data-bs-toggle="modal"
               data-bs-target="#login-modal">
               <i class="bi bi-person-circle"></i>
-              Iniciar sesión
+              iniciar sesión
             </a>
-
-            <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modal-title"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="login-modal-title">INICIAR SESIÓN</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="login-form" method="POST" action="{{url_for('auth.login')}}">
-                      <div class="mb-3">
-                        <label for="username" class="col-form-label">USUARIO:</label>
-                        <input type="email" class="form-control" id="username" name="email" />
-                      </div>
-                      <div class="mb-3">
-                        <label for="password" class="col-form-label">CONTRASEÑA:</label>
-                        <input type="password" class="form-control" id="password" name="password" />
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-                    <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
-                  </div>
+          </li>
+          <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modal-title" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="login-modal-title">INICIAR SESIÓN</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="login-form" method="POST" action="{{url_for('auth.login')}}">
+                    <div class="mb-3">
+                      <label for="username" class="col-form-label">USUARIO:</label>
+                      <input type="email" class="form-control" id="username" name="email" required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="col-form-label">CONTRASEÑA:</label>
+                      <input type="password" class="form-control" id="password" name="password" required />
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                  <button type="submit" form="login-form" class="btn btn-primary">INGRESAR</button>
                 </div>
               </div>
             </div>
-          </li>
+          </div>
+          {% endif %}
 
         </ul>
         <form class="d-flex my-2 my-lg-0">
@@ -99,6 +110,16 @@
 
   </header>
   <main class="container-fluid">
+    {% with errors = get_flashed_messages(category_filter=["error"]) %}
+    {% if errors %}
+    {% for msg in errors %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      {{msg}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
     {%block contenido%}
     {%endblock%}
   </main>

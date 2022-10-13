@@ -32,7 +32,7 @@ class ModelUsuario:
         return user
 
     @classmethod
-    def obtener_por_correo(cls, correo):
+    def obtener_por_correo_login(cls, correo):
         conn = get_connection()
         user = None
         with conn.cursor() as cur:

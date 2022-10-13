@@ -21,7 +21,7 @@ def login():
 
     password = str(password)
 
-    user = ModelUsuario.obtener_por_correo(email)
+    user = ModelUsuario.obtener_por_correo_login(email)
     if user == None:
         flash("Credenciales incorrectas", "error")
         return redirect(request.referrer)

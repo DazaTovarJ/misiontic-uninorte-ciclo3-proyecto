@@ -18,7 +18,7 @@ def login():
 
     password = str(password)
 
-    user = ModelUsuario.obtener_por_correo_y_contrasena(email, password)
+    user = ModelUsuario.obtener_por_correo(email)
     if user == None:
         flash("Credenciales incorrectas", "error")
     elif user[1] != email or not check_password_hash(user[2], password):
@@ -26,9 +26,8 @@ def login():
     else:
         session.clear()
         session["user_id"] = user[0]
-
-    return redirect(url_for("home.index"))
-
+        session["user_nombre"] = user[3]
+        return redirect(url_for("home.index"))
 
 @auth.route('/registro/inicial', methods=["POST"])
 def registro_inicial():
@@ -72,16 +71,17 @@ def register():
     return redirect(url_for("home.index"))
 
 
-@auth.route('/logout', methods=["POST"])
+@auth.route('/logout', methods=["GET"])
 def logout():
+    session.clear()
     return redirect(url_for("home.index"))
 
 
 @auth.before_app_request
 def load_logged_in_user():
-    user_id = session.get('user_id')
-
-    if user_id is None:
-        g.user = None
-    else:
-        g.user = ModelUsuario.obtener(user_id)
+    if session :
+        user_id = session.get('user_id')
+        if user_id is None:
+            g.user = None
+        else:
+            g.user = ModelUsuario.obtener(user_id)
